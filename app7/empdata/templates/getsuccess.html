@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<header style="text-align:center;align:center; border: 1px; cellpadding:5px; cellspacing: 5px; background:skyblue; color: white; ">
+       <caption><h1>Registration Success Page</h1></caption>
+        <a href="{%url 'emphomel'%}">Employee Home</a>
+
+        <br><br>
+    </header><br> <br> <br>
+    <hr>
+
+    <table align="center" border="1px" cellpadding="5px" cellspacing="5px">
+        <tr>
+            <th>Employee Email</th>
+            <th>Employee Password</th>
+            <th>Employee FullName</th>
+            <th>Employee City</th>
+            <th>Employee Salary</th>
+        </tr>
+        <tr>
+            <td>{{e1.email}}</td>
+            <td>{{e1.pswd}}</td>
+            <td>{{e1.fullname}}</td>
+            <td>{{e1.city}}</td>
+            <td>{{e1.salary}}</td>
+        </tr>
+    </table>
+
+<br><br><br><br><br><br><br>
+<hr>
+</body>
+</html>
