@@ -19,20 +19,22 @@
             </tr>
             {% for p in student %}
             <tr>
-                <td>p.name</td>
-                <td>p.email</td>
-                <td>p.password</td>
-                <td>p.address</td>
-                <td>p.marks</td>
+                <td>{{p.name}}</td>
+                <td>{{p.email}}</td>
+                <td>{{p.password}}</td>
+                <td>{{p.address}}</td>
+                <td>{{p.marks}}</td>
                 <td>
-                    <a href="/edit/{{p.id}}">Edit</a>
+                    <a href="/edit/{{p.id}}">Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="/delete/{{p.id}}">Delete</a>
                 </td>
 
             </tr>
             {% endfor %}
         </table>
-        <a href="{% url 'home'%}"
+        <br><br><br>
+        <hr>
+        <a href="{% url 'home'%}">Home Page</a>
     </center>
 
 </body>
