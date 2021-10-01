@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book List</title>
+    {% load static%}
+    <!--<link rel="stylesheet" href="{% static 'bootstrap-3.4.1-dist/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap-3.4.1-dist/css/bootstrap.css.map' %}" /> -->
+    <link rel="stylesheet" href="{% static 'bootstrap-3.4.1-dist/css/bootstrap.min.css' %}" />
+    <!--<link rel="stylesheet" href="{% static 'bootstrap-3.4.1-dist/css/bootstrap-theme.css' %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap-3.4.1-dist/css/bootstrap.min.css.map' %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap-3.4.1-dist/css/bootstrap-theme.css.map' %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap-3.4.1-dist/css/bootstrap-theme.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap-3.4.1-dist/css/bootstrap-theme.min.css.map' %}" /> -->
+
+</head>
+<body>
+    <table class="table table-bordered" >
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>NOP</th>
+            <th>CAST</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for book in books %}
+        <tr>
+            <td>{{book.name}}</td>
+            <td>{{book.nop}}</td>
+            <td>{{book.cast}}</td>
+        </tr>
+        {% end for %}
+        </tbody>
+        {% if books.has_other_pages %}
+        <ul class="pagination">
+            {% if books.has_previous %}
+            <li><a href="?page={{books.previous_page_number}}" >&laquo;</a> </li>
+            {% else %}
+            <li class="disabled"><span>&laquo;</span></li>
+            {% end if %}
+            {% for i in books.paginator.page_range %}
+            {% if books.number == i %}
+            <li class="active"><span>{{i}}<span class="sr_only">(current)</span> </span></li>
+            {% else %}
+            <li><a href="?page={{i}}">{{i}}</a> </li>
+            {% end if %}
+            {% end for %}
+            {% if books.has_next %}
+            <li><a href="?page={{books.next_page_number}}">&raquo;</a> </li>
+            {% else %}
+            <li class="disabled" ><span>&raquo;</span></li>
+            {% end if %}
+        </ul>
+    </table>
+</body>
+</html>
