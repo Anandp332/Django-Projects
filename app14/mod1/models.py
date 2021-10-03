@@ -1,6 +1,6 @@
 from django.db import models
 
-
+#One To One Relation
 class Car(models.Model):
     reg_no = models.CharField(max_length=10)
     owner_name = models.CharField(max_length=100)
