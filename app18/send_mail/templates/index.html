@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootrtrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiS">
+</head>
+<body>
+    <center>
+        <h1 class="alert alert-success">Mail Send Form</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <p>
+                    <h3>{{form.as_p}}</h3>
+                </p>
+                <br>
+                <input type="submit" name="Send" class="btn btn-primary btn-lg">
+            </div>
+        </form>
+    </center>
+
+
+</body>
+</html>
