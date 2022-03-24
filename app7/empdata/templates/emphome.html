@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Home Page</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header style="text-align:center;align:center; border: 1px; cellpadding:5px; cellspacing: 5px; background:skyblue; color: white; ">
+        <caption><h1>Home Page</h1></caption>
+        <a href="#">Employee Home</a>&nbsp;|&nbsp;&nbsp;
+        <a href="{% url 'empsignupl'%}">Employee SignUp</a>|&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'signinl' %}">Employee Signin</a>|
+        <a href="{% url 'empallviewl' %}">All Employee Detail</a>|
+        <a href="{% url 'getempdetall' %}">Get Employee Detail</a>|
+        <a href="{% url 'deletel' %}">Delete Employee Detail</a>|
+
+
+
+        <a href="{% url 'updatel' %}">Update Employee Detail</a>
+        <br><br>
+    </header><br> <br> <br>
+    <hr>
+
+
+</body>
+</html>

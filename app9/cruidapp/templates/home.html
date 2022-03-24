@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+    <center>
+        <h1 style="background:black;color:white">Here Insert New Student Information</h1>
+        <hr>
+        <form action="" method="post" class="post-action">
+            {% csrf_token %}
+            <table border="1">
+                {{form.as_table}}
+                <tr>
+                    <td>
+                        <input type="submit" value="SaveStudent">
+                    </td>
+                </tr>
+            </table>
+            <a href="{% url 'show'%}">Show All Students</a>
+        </form>
+    </center>
+
+</body>
+</html>

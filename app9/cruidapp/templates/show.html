@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show All Students Detail Page</title>
+</head>
+<body>
+    <center>
+        <h2 style="background:black;color:white">Show All Students Information</h2>
+        <hr>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Address</th>
+                <th>Marks</th>
+            </tr>
+            {% for p in student %}
+            <tr>
+                <td>{{p.name}}</td>
+                <td>{{p.email}}</td>
+                <td>{{p.password}}</td>
+                <td>{{p.address}}</td>
+                <td>{{p.marks}}</td>
+                <td>
+                    <a href="/edit/{{p.id}}">Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/delete/{{p.id}}">Delete</a>
+                </td>
+
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br><br>
+        <hr>
+        <a href="{% url 'home'%}">Home Page</a>
+    </center>
+
+</body>
+</html>

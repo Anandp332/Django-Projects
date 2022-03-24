@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doctor home page</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css\style1.css'%}">
+    <script src="{% static 'js\script1.js'%}"></script>
+</head>
+<body onload="fun1()">
+<h1>This is Doctor Page</h1>
+<form name="form1" onsubmit="checkdata()">
+    <label >Doctor Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" name="n1"> <br><br><br>
+    <label>Doctor Exp:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="number" name="n2"><br><br><br>
+    <input type="submit">
+</form>
+</body>
+</html>

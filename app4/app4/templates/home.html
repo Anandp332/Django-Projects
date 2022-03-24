@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<title>Home</title>
+<meta charset="utf-8">
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+</head>
+
+<body>
+    <div class="page">
+   <h1>Home Page</h1>
+    <div class="llink">
+        <a href="{% url 'signinl'%}">Sign In</a>
+        <a href="{% url 'signupl'%}">Sign Up</a>
+    </div>
+    <div>
+        <article>This is Home Page</article>
+    </div>
+        </div>
+</body>
+
+</html>

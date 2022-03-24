@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup Page</title>
+{% load static %}
+    <script src="{% static 'js\sign.js'%}"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form name="regform" onsubmit="fun1()" action="{% url 'empregprocessl'%}" method="get">
+
+        <header style="text-align:center;align:center; border: 1px; cellpadding:5px; cellspacing: 5px; background:skyblue; color: white; ">
+        <caption><h1>Signup Page</h1></caption>
+            <nav>
+                <a href="{%url 'emphomel'%}">Employee Home</a>|
+                <a href="{% url 'signinl' %}">Employee Signin</a>
+
+            </nav>
+
+        <br><br>
+    </header><br> <br> <br>
+    <hr>
+        <table>
+            <tr>
+                <td>
+                    <label> Employee Email </label>
+                </td>
+                <td>
+                    <input type="text" name="n1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label> Employee Password </label>
+                </td>
+                <td>
+                    <input type="password" name="n2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label> Employee FullName </label>
+                </td>
+                <td>
+                    <input type="text" name="n3">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label> Employee city </label>
+                </td>
+                <td>
+                    <input type="text" name="n4">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label> Employee Salary </label>
+                </td>
+                <td>
+                    <input type="text" name="n5">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="n6" class="btn btn-primary">
+                </td>
+                <td>
+                    <input type="reset" value="clear" class="btn btn-danger">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+</body>
+</html>

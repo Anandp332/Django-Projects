@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<header style="text-align:center;align:center; border: 1px; cellpadding:5px; cellspacing: 5px; background:skyblue; color: white; ">
+        <caption><h1>Update Page</h1></caption>
+        <a href="{%url 'emphomel'%}">Employee Home</a>&nbsp;&nbsp;&nbsp;
+
+        <br><br>
+    </header><br> <br> <br>
+    <hr>
+    <form name="regform" action="{% url 'updategetl'%}" method="get">
+    <table>
+        <tr>
+            <label>Employee Email</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" value='{{e1.email}}' name="n1" readonly>
+        </tr>
+        <br><br>
+        <tr>
+            <label>Employee Password</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" value='{{e1.pswd}}' name="n2">
+        </tr><br><br>
+        <tr>
+            <label>Employee FullName</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" value='{{e1.fullname}}' name="n3">
+        </tr><br><br>
+        <tr>
+            <label>Employee City</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" value='{{e1.city}}' name="n4">
+        </tr><br><br>
+        <tr>
+            <label>Employee Salary</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" value='{{e1.salary}}' name="n5">
+        </tr><br><br>
+        <tr>
+            <input type="submit" class="btn btn-success" value="Update">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="reset" class="btn btn-warning">
+        </tr><br><br>
+    </table>
+    </form>
+
+<br><br><br><br><br><br><br>
+<hr>
+</body>
+</html>
